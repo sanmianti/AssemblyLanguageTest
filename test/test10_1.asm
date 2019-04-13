@@ -57,10 +57,10 @@ show_str:
 	mov es, ax
 	
 	;计算bp的初值
-	mov ax, 160
+	mov al, 160
 	mul dh
 	mov dh, 0
-	add ax, dx
+	add ax, dx		;注意此处要加两次，因为每个字符占两个字节
 	add ax, dx
 	mov bp, ax
 	
